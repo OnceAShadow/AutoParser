@@ -8,7 +8,9 @@
 
 #import "APIListTableViewController.h"
 
-@interface APIListTableViewController ()
+@interface APIListTableViewController ()<UITableViewDelegate, UISearchBarDelegate>
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sgcAllorTop;
 
 @end
 
@@ -42,15 +44,38 @@
     return 2;
 }
 
-/*
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    //Available types of cells
+    //FavoritesCustomCell_StyleScience
+    
+    NSString * reuseIdentifier = @"";
+    if(indexPath.row == 0){
+        reuseIdentifier = @"CustomAPICell_StyleScience";
+        
+    }
+    else if(indexPath.row == 1){
+        
+        reuseIdentifier = @"CustomAPICell_StyleSocial";
+    }
+    else
+    {
+        reuseIdentifier = @"CustomAPICell_StyleEmpty";
+    
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
+    
+    
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -86,7 +111,10 @@
 }
 */
 
-/*
+
+
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -94,6 +122,18 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
+
+
+#pragma mark - UISegmentedControlDelegate
+
+/**
+ *  All/Top APIs selection
+ *  SegmentedController
+ *
+ *  @param sender UISegmenteControl indicates which view should be shown API Top (most used or better reviewed), API All (alphabetical order and searchable.
+ */
+- (IBAction)apiListSelectedSegmentChanged:(UISegmentedControl *)sender {
+}
 
 @end

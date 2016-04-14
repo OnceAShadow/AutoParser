@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A23BE01CC02A3800277787 /* MainScreenViewController.m */; };
+		70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */; };
 		84F50B0E1CB9C23C0077E484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B0D1CB9C23C0077E484 /* main.m */; };
 		84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B101CB9C23C0077E484 /* AppDelegate.m */; };
 		84F50B141CB9C23C0077E484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B131CB9C23C0077E484 /* ViewController.m */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70A23BDF1CC02A3800277787 /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScreenViewController.h; path = MainScreen/MainScreenViewController.h; sourceTree = "<group>"; };
+		70A23BE01CC02A3800277787 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScreenViewController.m; path = MainScreen/MainScreenViewController.m; sourceTree = "<group>"; };
+		70AC15991CBB3A8C00613419 /* APIListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIListTableViewController.h; sourceTree = "<group>"; };
+		70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIListTableViewController.m; sourceTree = "<group>"; };
 		84F50B091CB9C23C0077E484 /* Fred_Ralph_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fred_Ralph_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F50B0D1CB9C23C0077E484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F50B0F1CB9C23C0077E484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +47,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70A23BDB1CC029A400277787 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				70A23BDF1CC02A3800277787 /* MainScreenViewController.h */,
+				70A23BE01CC02A3800277787 /* MainScreenViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		70A23BDC1CC029AB00277787 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		70A23BDD1CC029D800277787 /* Available API List */ = {
+			isa = PBXGroup;
+			children = (
+				70AC15991CBB3A8C00613419 /* APIListTableViewController.h */,
+				70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */,
+			);
+			name = "Available API List";
+			sourceTree = "<group>";
+		};
 		84F50B001CB9C23C0077E484 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +91,9 @@
 		84F50B0B1CB9C23C0077E484 /* Fred_Ralph_Final */ = {
 			isa = PBXGroup;
 			children = (
+				70A23BDB1CC029A400277787 /* Main */,
+				70A23BDC1CC029AB00277787 /* Favorites */,
+				70A23BDD1CC029D800277787 /* Available API List */,
 				84F50B0F1CB9C23C0077E484 /* AppDelegate.h */,
 				84F50B101CB9C23C0077E484 /* AppDelegate.m */,
 				84F50B121CB9C23C0077E484 /* ViewController.h */,
@@ -156,6 +190,8 @@
 				84F50B141CB9C23C0077E484 /* ViewController.m in Sources */,
 				84F50B1A1CB9C23D0077E484 /* Fred_Ralph_Final.xcdatamodeld in Sources */,
 				84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */,
+				70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */,
+				70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */,
 				84F50B0E1CB9C23C0077E484 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +341,7 @@
 				84F50B251CB9C23D0077E484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
