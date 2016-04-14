@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface APIListTableViewController : UITableViewController
+@interface APIListTableViewController : UIViewController
 
 @end
