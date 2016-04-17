@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A23BE01CC02A3800277787 /* MainScreenViewController.m */; };
 		70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */; };
+		70EC2C671CC06370006B200D /* USGSEarthquakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EC2C661CC06370006B200D /* USGSEarthquakesViewController.m */; };
+		70EC2C6A1CC087D0006B200D /* USGSAPICustomizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EC2C691CC087D0006B200D /* USGSAPICustomizeViewController.m */; };
 		84F50B0E1CB9C23C0077E484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B0D1CB9C23C0077E484 /* main.m */; };
 		84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B101CB9C23C0077E484 /* AppDelegate.m */; };
 		84F50B141CB9C23C0077E484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B131CB9C23C0077E484 /* ViewController.m */; };
@@ -23,6 +25,10 @@
 		70A23BE01CC02A3800277787 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScreenViewController.m; path = MainScreen/MainScreenViewController.m; sourceTree = "<group>"; };
 		70AC15991CBB3A8C00613419 /* APIListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIListTableViewController.h; sourceTree = "<group>"; };
 		70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIListTableViewController.m; sourceTree = "<group>"; };
+		70EC2C651CC06370006B200D /* USGSEarthquakesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USGSEarthquakesViewController.h; path = APIs/USGS_Earthquakes/USGSEarthquakesViewController.h; sourceTree = "<group>"; };
+		70EC2C661CC06370006B200D /* USGSEarthquakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USGSEarthquakesViewController.m; path = APIs/USGS_Earthquakes/USGSEarthquakesViewController.m; sourceTree = "<group>"; };
+		70EC2C681CC087D0006B200D /* USGSAPICustomizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USGSAPICustomizeViewController.h; path = APIs/USGS_Earthquakes/USGSAPICustomizeViewController.h; sourceTree = "<group>"; };
+		70EC2C691CC087D0006B200D /* USGSAPICustomizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USGSAPICustomizeViewController.m; path = APIs/USGS_Earthquakes/USGSAPICustomizeViewController.m; sourceTree = "<group>"; };
 		84F50B091CB9C23C0077E484 /* Fred_Ralph_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fred_Ralph_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F50B0D1CB9C23C0077E484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F50B0F1CB9C23C0077E484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +78,25 @@
 			name = "Available API List";
 			sourceTree = "<group>";
 		};
+		70EC2C631CC06335006B200D /* APis */ = {
+			isa = PBXGroup;
+			children = (
+				70EC2C641CC06344006B200D /* USGS Earthquakes API */,
+			);
+			name = APis;
+			sourceTree = "<group>";
+		};
+		70EC2C641CC06344006B200D /* USGS Earthquakes API */ = {
+			isa = PBXGroup;
+			children = (
+				70EC2C651CC06370006B200D /* USGSEarthquakesViewController.h */,
+				70EC2C661CC06370006B200D /* USGSEarthquakesViewController.m */,
+				70EC2C681CC087D0006B200D /* USGSAPICustomizeViewController.h */,
+				70EC2C691CC087D0006B200D /* USGSAPICustomizeViewController.m */,
+			);
+			name = "USGS Earthquakes API";
+			sourceTree = "<group>";
+		};
 		84F50B001CB9C23C0077E484 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +119,7 @@
 				70A23BDB1CC029A400277787 /* Main */,
 				70A23BDC1CC029AB00277787 /* Favorites */,
 				70A23BDD1CC029D800277787 /* Available API List */,
+				70EC2C631CC06335006B200D /* APis */,
 				84F50B0F1CB9C23C0077E484 /* AppDelegate.h */,
 				84F50B101CB9C23C0077E484 /* AppDelegate.m */,
 				84F50B121CB9C23C0077E484 /* ViewController.h */,
@@ -188,6 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F50B141CB9C23C0077E484 /* ViewController.m in Sources */,
+				70EC2C671CC06370006B200D /* USGSEarthquakesViewController.m in Sources */,
+				70EC2C6A1CC087D0006B200D /* USGSAPICustomizeViewController.m in Sources */,
 				84F50B1A1CB9C23D0077E484 /* Fred_Ralph_Final.xcdatamodeld in Sources */,
 				84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */,
 				70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */,
@@ -304,10 +332,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fred_Ralph_Final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mae.rflores.Fred-Ralph-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -315,10 +346,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Fred_Ralph_Final/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mae.rflores.Fred-Ralph-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
