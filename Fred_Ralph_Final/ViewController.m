@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "APIWebHandler.h"
+#import "GeoEarthQuake.h"
+
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSMutableArray* earthQuakeList;
 
 @end
 
@@ -16,12 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.earthQuakeList = [APIWebHandler requestEQList];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)btnPrint:(id)sender {
+    for( int i = 0; i < self.earthQuakeList.count ; ++i){
+        GeoEarthQuake* eq = [self.earthQuakeList objectAtIndex:i];
+        NSLog(@"%f", eq.mag );
+    }
 }
 
 @end

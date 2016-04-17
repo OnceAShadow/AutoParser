@@ -335,7 +335,7 @@
         <!--USGS Eathquake API-->
         <scene sceneID="PPB-7f-Nnw">
             <objects>
-                <viewController id="yIA-0u-yX0" sceneMemberID="viewController">
+                <viewController id="yIA-0u-yX0" customClass="USGSAPICustomizeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="beB-th-6P6"/>
                         <viewControllerLayoutGuide type="bottom" id="OPf-Vy-zp6"/>
@@ -501,7 +501,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fc3-kK-H7I">
-                                <rect key="frame" x="20" y="108" width="279" height="71"/>
+                                <rect key="frame" x="20" y="98" width="291" height="92"/>
+                                <color key="backgroundColor" red="0.50815612770468443" green="0.61111048715154304" blue="0.7016524869109948" alpha="1" colorSpace="calibratedRGB"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Code Format" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPc-KI-h1O">
                                 <rect key="frame" x="20" y="75" width="100" height="21"/>
