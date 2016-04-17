@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A23BE01CC02A3800277787 /* MainScreenViewController.m */; };
 		70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */; };
+		84E4A8E11CC30A5C00C45ABE /* GeoEarthQuake.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4A8E01CC30A5C00C45ABE /* GeoEarthQuake.m */; };
+		84E4A8E41CC30A6F00C45ABE /* APIWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4A8E31CC30A6F00C45ABE /* APIWebHandler.m */; };
 		84F50B0E1CB9C23C0077E484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B0D1CB9C23C0077E484 /* main.m */; };
 		84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B101CB9C23C0077E484 /* AppDelegate.m */; };
 		84F50B141CB9C23C0077E484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B131CB9C23C0077E484 /* ViewController.m */; };
@@ -23,6 +25,10 @@
 		70A23BE01CC02A3800277787 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScreenViewController.m; path = MainScreen/MainScreenViewController.m; sourceTree = "<group>"; };
 		70AC15991CBB3A8C00613419 /* APIListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIListTableViewController.h; sourceTree = "<group>"; };
 		70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIListTableViewController.m; sourceTree = "<group>"; };
+		84E4A8DF1CC30A5C00C45ABE /* GeoEarthQuake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoEarthQuake.h; sourceTree = "<group>"; };
+		84E4A8E01CC30A5C00C45ABE /* GeoEarthQuake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoEarthQuake.m; sourceTree = "<group>"; };
+		84E4A8E21CC30A6F00C45ABE /* APIWebHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIWebHandler.h; sourceTree = "<group>"; };
+		84E4A8E31CC30A6F00C45ABE /* APIWebHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIWebHandler.m; sourceTree = "<group>"; };
 		84F50B091CB9C23C0077E484 /* Fred_Ralph_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fred_Ralph_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F50B0D1CB9C23C0077E484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F50B0F1CB9C23C0077E484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +72,10 @@
 		70A23BDD1CC029D800277787 /* Available API List */ = {
 			isa = PBXGroup;
 			children = (
+				84E4A8E21CC30A6F00C45ABE /* APIWebHandler.h */,
+				84E4A8E31CC30A6F00C45ABE /* APIWebHandler.m */,
+				84E4A8DF1CC30A5C00C45ABE /* GeoEarthQuake.h */,
+				84E4A8E01CC30A5C00C45ABE /* GeoEarthQuake.m */,
 				70AC15991CBB3A8C00613419 /* APIListTableViewController.h */,
 				70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */,
 			);
@@ -187,6 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E4A8E41CC30A6F00C45ABE /* APIWebHandler.m in Sources */,
+				84E4A8E11CC30A5C00C45ABE /* GeoEarthQuake.m in Sources */,
 				84F50B141CB9C23C0077E484 /* ViewController.m in Sources */,
 				84F50B1A1CB9C23D0077E484 /* Fred_Ralph_Final.xcdatamodeld in Sources */,
 				84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */,
