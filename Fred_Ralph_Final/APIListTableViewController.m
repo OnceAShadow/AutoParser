@@ -8,7 +8,7 @@
 
 #import "APIListTableViewController.h"
 
-@interface APIListTableViewController ()<UITableViewDelegate, UISearchBarDelegate>
+@interface APIListTableViewController ()<UITableViewDataSource, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sgcAllorTop;
 
@@ -54,16 +54,16 @@
     
     NSString * reuseIdentifier = @"";
     if(indexPath.row == 0){
-        reuseIdentifier = @"CustomAPICell_StyleScience";
+        reuseIdentifier = @"APIListCell_StyleScience";
         
     }
     else if(indexPath.row == 1){
         
-        reuseIdentifier = @"CustomAPICell_StyleSocial";
+        reuseIdentifier = @"APIListCell_StyleSocial";
     }
     else
     {
-        reuseIdentifier = @"CustomAPICell_StyleEmpty";
+        reuseIdentifier = @"APIListCell_StyleEmpty";
     
     }
     
@@ -134,6 +134,8 @@
  *  @param sender UISegmenteControl indicates which view should be shown API Top (most used or better reviewed), API All (alphabetical order and searchable.
  */
 - (IBAction)apiListSelectedSegmentChanged:(UISegmentedControl *)sender {
+    
+    
 }
 
 @end
