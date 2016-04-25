@@ -44,7 +44,6 @@ NSString* nameOfArray;
     NSError* treeError = [NSError new];
     treeError = nil;
     
-    //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
     NSData* BeerData = [NSData dataWithContentsOfURL:url];
     NSError *error;
     NSDictionary *root = [NSJSONSerialization JSONObjectWithData:BeerData options:NSJSONReadingAllowFragments error:&error];
@@ -53,24 +52,20 @@ NSString* nameOfArray;
         treeError = error;
     }else{
         if( [root isKindOfClass:[NSDictionary class]] ){
-            NSLog(@"root is a NSDictionary");
             
             self.treeRoot = [[self class] treeBuilder:NULL theData:root keyName: [NSString stringWithFormat:@"root"]];
             
             [[self class] trimTree];
             
         }else if ( [root isKindOfClass:[NSArray class]] ){
-            NSLog(@"root is a NSArray");
             treeError = [NSError errorWithDomain:@"Response is not a Dictionary" code:404 userInfo:nil];
 
         }else{
             treeError = [NSError errorWithDomain:@"Response is not valid" code:404 userInfo:nil];
-            NSLog(@"Something is wrong with root!!");
         }
-        NSLog(@"Best Array for the job is: %@", nameOfArray );
+        //NSLog(@"Best Array for the job is: %@", nameOfArray );
     }
-    //});
-    NSLog(@"what %@", self.treeRoot.name);
+
     return treeError;
 }
 
@@ -124,7 +119,6 @@ NSString* nameOfArray;
     }else if( [jData isKindOfClass:[NSString class]] ){
         newNode.type = @"NSString";
     }else{
-        NSLog(@"-= %@ Is not being recognized!!=-", name);
         return NULL;
     }
 
@@ -176,6 +170,5 @@ NSString* nameOfArray;
         if ( nodePointer.parent == NULL ) finished = true;
     }
 }
-
 
 @end
