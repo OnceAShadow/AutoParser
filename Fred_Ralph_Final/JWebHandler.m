@@ -8,6 +8,25 @@
 #import "JNode.h"
 
 @implementation JWebHandler
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
++ (id)sharedJWebHandler {
+    static JWebHandler *sharedJWebHandler = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedJWebHandler = [[self alloc] init];
+    });
+    return sharedJWebHandler;
+}
+
+
 
 JNode* treeRoot;
 JNode* bestArrayLocation;
@@ -17,7 +36,7 @@ int bestObjSize;
 
 NSString* nameOfArray;
 
-+(NSError*) autoParse:(NSString*)urlString{
+- (NSError*) autoParse:(NSString*)urlString{
     
     NSURL *url = [NSURL URLWithString:urlString];
     bestArraySize = 0;
@@ -37,9 +56,9 @@ NSString* nameOfArray;
         if( [root isKindOfClass:[NSDictionary class]] ){
             NSLog(@"root is a NSDictionary");
             
-            treeRoot = [self treeBuilder:NULL theData:root keyName: [NSString stringWithFormat:@"root"]];
+            treeRoot = [[self class] treeBuilder:NULL theData:root keyName: [NSString stringWithFormat:@"root"]];
             
-            [self trimTree];
+            [[self class] trimTree];
             
         }else if ( [root isKindOfClass:[NSArray class]] ){
             NSLog(@"root is a NSArray");

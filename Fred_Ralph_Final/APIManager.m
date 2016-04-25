@@ -8,6 +8,28 @@
 
 #import "APIManager.h"
 
+@implementation APIManager
+
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
++ (id)sharedAPIManager {
+    static APIManager *sharedAPIManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedAPIManager = [[self alloc] init];
+    });
+    return sharedAPIManager;
+}
+
+@end
 
 
 @implementation API

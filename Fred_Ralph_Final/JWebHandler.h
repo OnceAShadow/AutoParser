@@ -10,7 +10,9 @@
 
 @interface JWebHandler : NSObject
 
-+(NSError*) autoParse:(NSString*)urlString;
-    
+- (NSError*) autoParse:(NSString*)urlString;
+
+
++ (id)sharedJWebHandler;
     
 @end
