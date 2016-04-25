@@ -99,6 +99,7 @@ NSString* nameOfArray;
             if( arr.count == 1){
                 [[newNode children] addObject:[self treeBuilder:newNode theData:arr[0] keyName:@"NSDictionary"]];
             }else{
+                
                 [[newNode children] addObject:[self concatArrayValues:newNode theData:(NSArray*)jData keyName:@"NSDictionary"]];
             }
         }else if (arr.count > 0){
@@ -148,7 +149,7 @@ NSString* nameOfArray;
 +(JNode*) concatArrayValues: (JNode*)parent theData:(NSArray*)array keyName:(NSString*)name {
 
     JNode* newNode = [[JNode alloc] initWithNode:parent];
-    [[newNode children] addObject:[self treeBuilder:newNode theData:array[0] keyName:@"NSDictionary"]];
+    newNode = [self treeBuilder:parent theData:array[0] keyName:@"NSDictionary"];
     
     return newNode;
 }
