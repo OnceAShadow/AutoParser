@@ -10,7 +10,7 @@
 
 @interface JWebHandler : NSObject
 
-+(void) autoParse:(NSString*)urlString;
++(NSError*) autoParse:(NSString*)urlString;
     
     
 @end

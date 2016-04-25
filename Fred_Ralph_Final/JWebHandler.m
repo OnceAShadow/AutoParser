@@ -17,17 +17,23 @@ int bestObjSize;
 
 NSString* nameOfArray;
 
-+(void) autoParse:(NSString*)urlString{
++(NSError*) autoParse:(NSString*)urlString{
     
     NSURL *url = [NSURL URLWithString:urlString];
     bestArraySize = 0;
     bestObjSize = 0;
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData* BeerData = [NSData dataWithContentsOfURL:url];
-        NSError *error;
-        NSDictionary *root = [NSJSONSerialization JSONObjectWithData:BeerData options:NSJSONReadingAllowFragments error:&error];
-        
+    NSError* treeError = [NSError new];
+    treeError = nil;
+    
+    //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+    NSData* BeerData = [NSData dataWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *root = [NSJSONSerialization JSONObjectWithData:BeerData options:NSJSONReadingAllowFragments error:&error];
+
+    if ( error != nil){
+        treeError = error;
+    }else{
         if( [root isKindOfClass:[NSDictionary class]] ){
             NSLog(@"root is a NSDictionary");
             
@@ -37,12 +43,16 @@ NSString* nameOfArray;
             
         }else if ( [root isKindOfClass:[NSArray class]] ){
             NSLog(@"root is a NSArray");
-            
+            treeError = [NSError errorWithDomain:@"Response is not a Dictionary" code:404 userInfo:nil];
+
         }else{
+            treeError = [NSError errorWithDomain:@"Response is not valid" code:404 userInfo:nil];
             NSLog(@"Something is wrong with root!!");
         }
         NSLog(@"Best Array for the job is: %@", nameOfArray );
-    });
+    }
+    //});
+    return treeError;
 }
 
 +(JNode*) treeBuilder:(JNode*)parent theData:(NSObject*)jData keyName:(NSString*)name{
@@ -76,6 +86,17 @@ NSString* nameOfArray;
                 [[newNode children] addObject:[self treeBuilder:newNode theData:arr[0] keyName:@"NSDictionary"]];
             }else{
                 [[newNode children] addObject:[self concatArrayValues:newNode theData:(NSArray*)jData keyName:@"NSDictionary"]];
+            }
+        }else if (arr.count > 0){
+            if( [arr[0] isKindOfClass:[NSNumber class]] ){
+                JNode* extraNode = [[JNode alloc] initWithNode:newNode];
+                extraNode.name = @"Array Element";
+                extraNode.type = @"NSNumber";
+                
+            }else if ( [arr[0] isKindOfClass:[NSString class]] ){
+                JNode* extraNode = [[JNode alloc] initWithNode:newNode];
+                extraNode.name = @"Array Element";
+                extraNode.type = @"NSString";
             }
         }
         
@@ -116,15 +137,12 @@ NSString* nameOfArray;
     JNode* newNode = [[JNode alloc] initWithNode:parent];
     [[newNode children] addObject:[self treeBuilder:newNode theData:array[0] keyName:@"NSDictionary"]];
     
-    //for(int i = 1; i < array.count ; ++i){
-        
-    //}
-    
     return newNode;
 }
 
 +(void) trimTree{
     bool finished = false;
+    bestArrayLocation.name = @"MainArray";
     
     JNode* nodePointer = bestArrayLocation;
     
