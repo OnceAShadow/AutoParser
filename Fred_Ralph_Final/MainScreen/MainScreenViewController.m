@@ -9,7 +9,9 @@
 #import "MainScreenViewController.h"
 #import "JWebHandler.h"
 
-@interface MainScreenViewController () <UITextFieldDelegate>
+@interface MainScreenViewController () <UITextFieldDelegate>{
+    NSError *errDownloadParse;
+}
 @property (weak, nonatomic) IBOutlet UILabel *lblApiTitle;
 @property (weak, nonatomic) IBOutlet UITextView *lblAPIDescription;
 @property (weak, nonatomic) IBOutlet UIButton *btnUserLogin;
@@ -60,53 +62,36 @@
 
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-
-    NSLog(@"textFieldShouldReturn");
     [textField resignFirstResponder];
     
     return true;
 }
 
 
--(void)textFieldDidEndEditing:(UITextField *)textField{
-
-    NSLog(@"textFieldDidEndEditing");
-    [textField resignFirstResponder];
-    
-    
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        JWebHandler *handler  = [JWebHandler sharedJWebHandler];
-        NSError * err = [handler autoParse:textField.text];
-        [self enableNextAfterParse:err];
-    
-    });
-    
-}
-
-
-- (void) enableNextAfterParse:(NSError *) error{
-    if(error!=nil){
-        //present alert view modal with the error
-        NSInteger errorCode = error.code;
-        NSString *stringCode = error.localizedDescription;
-        
-        NSLog(@"An error ocurred while parsing the URL. Code [%li], Description [%@]", (long)errorCode, stringCode);
-    }
-    else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.actParsing stopAnimating];
-            [self.btnContinue setHidden:NO];
-        });
-        
-    }
-
-}
 - (IBAction)continueAction:(UIButton *)sender {
+    [self.actParsing setHidden:NO];
+    [self.actParsing startAnimating];
+    JWebHandler *handler  = [JWebHandler sharedJWebHandler];
+    errDownloadParse = [handler autoParse:self.UniversalAPIBar.text];
     
-    
-    [self performSegueWithIdentifier:@"displayCustomizableAPIView" sender:nil];
+    [self.actParsing startAnimating];
+    if(errDownloadParse==nil){
+        [self performSegueWithIdentifier:@"displayCustomizableAPIView" sender:nil];
+    }
 }
+
+
+
+
+#pragma mark -  dismiss keyboard while touching the exterior of the view.
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    [self.view endEditing:YES];
+
+}
+
+
 
 
 
