@@ -14,6 +14,8 @@
 		70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */; };
 		70EC2C671CC06370006B200D /* USGSEarthquakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EC2C661CC06370006B200D /* USGSEarthquakesViewController.m */; };
 		70EC2C6A1CC087D0006B200D /* USGSAPICustomizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EC2C691CC087D0006B200D /* USGSAPICustomizeViewController.m */; };
+		842C24F31CCDABF600EE5A3A /* JNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F01CCDABF600EE5A3A /* JNode.m */; };
+		842C24F41CCDABF600EE5A3A /* JWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F21CCDABF600EE5A3A /* JWebHandler.m */; };
 		84E4A8E11CC30A5C00C45ABE /* GeoEarthQuake.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4A8E01CC30A5C00C45ABE /* GeoEarthQuake.m */; };
 		84E4A8E41CC30A6F00C45ABE /* APIWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4A8E31CC30A6F00C45ABE /* APIWebHandler.m */; };
 		84F50B0E1CB9C23C0077E484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B0D1CB9C23C0077E484 /* main.m */; };
@@ -40,6 +42,10 @@
 		70EC2C661CC06370006B200D /* USGSEarthquakesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USGSEarthquakesViewController.m; path = APIs/USGS_Earthquakes/USGSEarthquakesViewController.m; sourceTree = "<group>"; };
 		70EC2C681CC087D0006B200D /* USGSAPICustomizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USGSAPICustomizeViewController.h; path = APIs/USGS_Earthquakes/USGSAPICustomizeViewController.h; sourceTree = "<group>"; };
 		70EC2C691CC087D0006B200D /* USGSAPICustomizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USGSAPICustomizeViewController.m; path = APIs/USGS_Earthquakes/USGSAPICustomizeViewController.m; sourceTree = "<group>"; };
+		842C24EF1CCDABF600EE5A3A /* JNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNode.h; sourceTree = "<group>"; };
+		842C24F01CCDABF600EE5A3A /* JNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNode.m; sourceTree = "<group>"; };
+		842C24F11CCDABF600EE5A3A /* JWebHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWebHandler.h; sourceTree = "<group>"; };
+		842C24F21CCDABF600EE5A3A /* JWebHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWebHandler.m; sourceTree = "<group>"; };
 		84E4A8DF1CC30A5C00C45ABE /* GeoEarthQuake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoEarthQuake.h; sourceTree = "<group>"; };
 		84E4A8E01CC30A5C00C45ABE /* GeoEarthQuake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoEarthQuake.m; sourceTree = "<group>"; };
 		84E4A8E21CC30A6F00C45ABE /* APIWebHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIWebHandler.h; sourceTree = "<group>"; };
@@ -102,6 +108,10 @@
 		70EC2C631CC06335006B200D /* APis */ = {
 			isa = PBXGroup;
 			children = (
+				842C24EF1CCDABF600EE5A3A /* JNode.h */,
+				842C24F01CCDABF600EE5A3A /* JNode.m */,
+				842C24F11CCDABF600EE5A3A /* JWebHandler.h */,
+				842C24F21CCDABF600EE5A3A /* JWebHandler.m */,
 				70EC2C641CC06344006B200D /* USGS Earthquakes API */,
 			);
 			name = APis;
@@ -242,8 +252,10 @@
 				84E4A8E41CC30A6F00C45ABE /* APIWebHandler.m in Sources */,
 				84E4A8E11CC30A5C00C45ABE /* GeoEarthQuake.m in Sources */,
 				84F50B141CB9C23C0077E484 /* ViewController.m in Sources */,
+				842C24F31CCDABF600EE5A3A /* JNode.m in Sources */,
 				70EC2C671CC06370006B200D /* USGSEarthquakesViewController.m in Sources */,
 				70EC2C6A1CC087D0006B200D /* USGSAPICustomizeViewController.m in Sources */,
+				842C24F41CCDABF600EE5A3A /* JWebHandler.m in Sources */,
 				84F50B1A1CB9C23D0077E484 /* Fred_Ralph_Final.xcdatamodeld in Sources */,
 				84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */,
 				70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */,
