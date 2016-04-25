@@ -1,8 +1,7 @@
-//  GeoEarthQuake.m
-//  EQ
+//  Model File Implementation
 //
-//  Created by admin on 4/14/16.
-//  Copyright © 2016 admin. All rights reserved.
+//  Created by API Crossroads
+//  Copyright © 2016 API Crossroads. All rights reserved.
 
 #import "GeoEarthQuake.h"
 

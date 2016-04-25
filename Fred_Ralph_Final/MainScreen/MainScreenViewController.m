@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblApiTitle;
 @property (weak, nonatomic) IBOutlet UITextView *lblAPIDescription;
 @property (weak, nonatomic) IBOutlet UIButton *btnUserLogin;
+@property (weak, nonatomic) IBOutlet UITextField *UniversalAPIBar;
 
 @end
 

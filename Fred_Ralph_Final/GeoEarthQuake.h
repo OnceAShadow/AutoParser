@@ -9,6 +9,8 @@
 
 @interface GeoEarthQuake : NSObject
 
+
+
 @property(nonatomic, strong) NSString*  id;
 @property float longitude;
 @property float latitude;

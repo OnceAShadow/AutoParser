@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		704667CD1CC5FA850049AA2F /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 704667CC1CC5FA850049AA2F /* APIManager.m */; };
+		70476E0A1CCCE5440057DD91 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70476E091CCCE5440057DD91 /* UserManager.m */; };
+		70476E0D1CCD76A80057DD91 /* OutputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70476E0C1CCD76A80057DD91 /* OutputManager.m */; };
 		70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A23BE01CC02A3800277787 /* MainScreenViewController.m */; };
 		70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */; };
 		70EC2C671CC06370006B200D /* USGSEarthquakesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EC2C661CC06370006B200D /* USGSEarthquakesViewController.m */; };
@@ -23,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		704667CB1CC5FA850049AA2F /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		704667CC1CC5FA850049AA2F /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		70476E081CCCE5440057DD91 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		70476E091CCCE5440057DD91 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		70476E0B1CCD76A80057DD91 /* OutputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputManager.h; sourceTree = "<group>"; };
+		70476E0C1CCD76A80057DD91 /* OutputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputManager.m; sourceTree = "<group>"; };
 		70A23BDF1CC02A3800277787 /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScreenViewController.h; path = MainScreen/MainScreenViewController.h; sourceTree = "<group>"; };
 		70A23BE01CC02A3800277787 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScreenViewController.m; path = MainScreen/MainScreenViewController.m; sourceTree = "<group>"; };
 		70AC15991CBB3A8C00613419 /* APIListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIListTableViewController.h; sourceTree = "<group>"; };
@@ -59,13 +68,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70A23BDB1CC029A400277787 /* Main */ = {
+		70A23BDB1CC029A400277787 /* Generic API Parser */ = {
 			isa = PBXGroup;
 			children = (
 				70A23BDF1CC02A3800277787 /* MainScreenViewController.h */,
 				70A23BE01CC02A3800277787 /* MainScreenViewController.m */,
+				704667CB1CC5FA850049AA2F /* APIManager.h */,
+				704667CC1CC5FA850049AA2F /* APIManager.m */,
+				70476E081CCCE5440057DD91 /* UserManager.h */,
+				70476E091CCCE5440057DD91 /* UserManager.m */,
+				70476E0B1CCD76A80057DD91 /* OutputManager.h */,
+				70476E0C1CCD76A80057DD91 /* OutputManager.m */,
 			);
-			name = Main;
+			name = "Generic API Parser";
 			sourceTree = "<group>";
 		};
 		70A23BDC1CC029AB00277787 /* Favorites */ = {
@@ -126,7 +141,7 @@
 		84F50B0B1CB9C23C0077E484 /* Fred_Ralph_Final */ = {
 			isa = PBXGroup;
 			children = (
-				70A23BDB1CC029A400277787 /* Main */,
+				70A23BDB1CC029A400277787 /* Generic API Parser */,
 				70A23BDC1CC029AB00277787 /* Favorites */,
 				70A23BDD1CC029D800277787 /* Available API List */,
 				70EC2C631CC06335006B200D /* APis */,
@@ -223,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70476E0D1CCD76A80057DD91 /* OutputManager.m in Sources */,
 				84E4A8E41CC30A6F00C45ABE /* APIWebHandler.m in Sources */,
 				84E4A8E11CC30A5C00C45ABE /* GeoEarthQuake.m in Sources */,
 				84F50B141CB9C23C0077E484 /* ViewController.m in Sources */,
@@ -233,6 +249,8 @@
 				70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */,
 				70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */,
 				84F50B0E1CB9C23C0077E484 /* main.m in Sources */,
+				70476E0A1CCCE5440057DD91 /* UserManager.m in Sources */,
+				704667CD1CC5FA850049AA2F /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
