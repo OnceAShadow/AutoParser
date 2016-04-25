@@ -26,9 +26,6 @@
     return sharedJWebHandler;
 }
 
-
-
-JNode* treeRoot;
 JNode* bestArrayLocation;
 
 int bestArraySize;
@@ -41,6 +38,8 @@ NSString* nameOfArray;
     NSURL *url = [NSURL URLWithString:urlString];
     bestArraySize = 0;
     bestObjSize = 0;
+    
+    self.treeRoot = [JNode new];
     
     NSError* treeError = [NSError new];
     treeError = nil;
@@ -56,7 +55,7 @@ NSString* nameOfArray;
         if( [root isKindOfClass:[NSDictionary class]] ){
             NSLog(@"root is a NSDictionary");
             
-            treeRoot = [[self class] treeBuilder:NULL theData:root keyName: [NSString stringWithFormat:@"root"]];
+            self.treeRoot = [[self class] treeBuilder:NULL theData:root keyName: [NSString stringWithFormat:@"root"]];
             
             [[self class] trimTree];
             
@@ -71,6 +70,7 @@ NSString* nameOfArray;
         NSLog(@"Best Array for the job is: %@", nameOfArray );
     }
     //});
+    NSLog(@"what %@", self.treeRoot.name);
     return treeError;
 }
 

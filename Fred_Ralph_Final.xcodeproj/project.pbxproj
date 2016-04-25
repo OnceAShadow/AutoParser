@@ -14,6 +14,7 @@
 		70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */; };
 		842C24F31CCDABF600EE5A3A /* JNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F01CCDABF600EE5A3A /* JNode.m */; };
 		842C24F41CCDABF600EE5A3A /* JWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F21CCDABF600EE5A3A /* JWebHandler.m */; };
+		842C24F71CCDDA4700EE5A3A /* ElementSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F61CCDDA4700EE5A3A /* ElementSelection.m */; };
 		84F50B0E1CB9C23C0077E484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B0D1CB9C23C0077E484 /* main.m */; };
 		84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B101CB9C23C0077E484 /* AppDelegate.m */; };
 		84F50B141CB9C23C0077E484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F50B131CB9C23C0077E484 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 		842C24F01CCDABF600EE5A3A /* JNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNode.m; sourceTree = "<group>"; };
 		842C24F11CCDABF600EE5A3A /* JWebHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWebHandler.h; sourceTree = "<group>"; };
 		842C24F21CCDABF600EE5A3A /* JWebHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWebHandler.m; sourceTree = "<group>"; };
+		842C24F51CCDDA4700EE5A3A /* ElementSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementSelection.h; sourceTree = "<group>"; };
+		842C24F61CCDDA4700EE5A3A /* ElementSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementSelection.m; sourceTree = "<group>"; };
 		84F50B091CB9C23C0077E484 /* Fred_Ralph_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fred_Ralph_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F50B0D1CB9C23C0077E484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F50B0F1CB9C23C0077E484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				842C24F01CCDABF600EE5A3A /* JNode.m */,
 				842C24F11CCDABF600EE5A3A /* JWebHandler.h */,
 				842C24F21CCDABF600EE5A3A /* JWebHandler.m */,
+				842C24F51CCDDA4700EE5A3A /* ElementSelection.h */,
+				842C24F61CCDDA4700EE5A3A /* ElementSelection.m */,
 			);
 			name = APis;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */,
 				70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */,
 				84F50B0E1CB9C23C0077E484 /* main.m in Sources */,
+				842C24F71CCDDA4700EE5A3A /* ElementSelection.m in Sources */,
 				70476E0A1CCCE5440057DD91 /* UserManager.m in Sources */,
 				704667CD1CC5FA850049AA2F /* APIManager.m in Sources */,
 			);

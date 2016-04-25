@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class JNode;
+
 @interface JWebHandler : NSObject
 
 - (NSError*) autoParse:(NSString*)urlString;
 
+@property (strong, nonatomic) JNode* treeRoot;
 
 + (id)sharedJWebHandler;
     

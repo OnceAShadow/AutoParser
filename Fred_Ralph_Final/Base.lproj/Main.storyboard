@@ -593,7 +593,7 @@
         <!--API Element Selection-->
         <scene sceneID="PPB-7f-Nnw">
             <objects>
-                <viewController id="yIA-0u-yX0" sceneMemberID="viewController">
+                <viewController id="yIA-0u-yX0" customClass="ElementSelection" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="beB-th-6P6"/>
                         <viewControllerLayoutGuide type="bottom" id="OPf-Vy-zp6"/>
@@ -655,7 +655,7 @@
                                         <color key="backgroundColor" red="0.89397905759162299" green="0.89397905759162299" blue="0.89397905759162299" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Property [1]"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1T-1v-956">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1T-1v-956">
                                         <rect key="frame" x="0.0" y="178" width="600" height="172"/>
                                         <color key="backgroundColor" red="0.6738896880477151" green="0.76937429137537561" blue="0.89397905759162299" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Property [2]"/>

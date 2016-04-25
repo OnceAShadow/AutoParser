@@ -16,17 +16,18 @@
     return self;
 }
 
-
 -(id)initWithNode:(JNode*)node{
     
     if(node != NULL){
         self.parent = node;
         self.type = @"";
         self.name = @"";
+        self.customName = @"";
         self.children = [NSMutableArray new];
     }else{
         self.type = @"root";
         self.name = @"";
+        self.customName = @"";
         self.children = [NSMutableArray new];
     }
     
