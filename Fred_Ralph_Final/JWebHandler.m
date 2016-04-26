@@ -159,7 +159,7 @@ NSString* nameOfArray;
 
 +(void) trimTree{
     bool finished = false;
-    bestArrayLocation.name = @"MainArray";
+    bestArrayLocation.type = @"MainArray";
     
     JNode* nodePointer = bestArrayLocation;
     
