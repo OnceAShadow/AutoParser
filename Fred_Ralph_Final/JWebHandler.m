@@ -26,9 +26,6 @@
     return sharedJWebHandler;
 }
 
-
-
-JNode* treeRoot;
 JNode* bestArrayLocation;
 
 int bestArraySize;
@@ -45,10 +42,11 @@ NSString* nameOfArray;
     bestArraySize = 0;
     bestObjSize = 0;
     
+    self.treeRoot = [JNode new];
+    
     NSError* treeError = [NSError new];
     treeError = nil;
     
-    //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
     NSData* BeerData = [NSData dataWithContentsOfURL:url];
     NSError *error;
     NSDictionary *root = [NSJSONSerialization JSONObjectWithData:BeerData options:NSJSONReadingAllowFragments error:&error];
@@ -57,23 +55,20 @@ NSString* nameOfArray;
         treeError = error;
     }else{
         if( [root isKindOfClass:[NSDictionary class]] ){
-            NSLog(@"root is a NSDictionary");
             
-            treeRoot = [[self class] treeBuilder:NULL theData:root keyName: [NSString stringWithFormat:@"root"]];
+            self.treeRoot = [[self class] treeBuilder:NULL theData:root keyName: [NSString stringWithFormat:@"root"]];
             
             [[self class] trimTree];
             
         }else if ( [root isKindOfClass:[NSArray class]] ){
-            NSLog(@"root is a NSArray");
             treeError = [NSError errorWithDomain:@"Response is not a Dictionary" code:404 userInfo:nil];
 
         }else{
             treeError = [NSError errorWithDomain:@"Response is not valid" code:404 userInfo:nil];
-            NSLog(@"Something is wrong with root!!");
         }
-        NSLog(@"Best Array for the job is: %@", nameOfArray );
+        //NSLog(@"Best Array for the job is: %@", nameOfArray );
     }
-    //});
+
     return treeError;
 }
 
@@ -107,6 +102,7 @@ NSString* nameOfArray;
             if( arr.count == 1){
                 [[newNode children] addObject:[self treeBuilder:newNode theData:arr[0] keyName:@"NSDictionary"]];
             }else{
+                
                 [[newNode children] addObject:[self concatArrayValues:newNode theData:(NSArray*)jData keyName:@"NSDictionary"]];
             }
         }else if (arr.count > 0){
@@ -127,7 +123,6 @@ NSString* nameOfArray;
     }else if( [jData isKindOfClass:[NSString class]] ){
         newNode.type = @"NSString";
     }else{
-        NSLog(@"-= %@ Is not being recognized!!=-", name);
         return NULL;
     }
 
@@ -157,7 +152,7 @@ NSString* nameOfArray;
 +(JNode*) concatArrayValues: (JNode*)parent theData:(NSArray*)array keyName:(NSString*)name {
 
     JNode* newNode = [[JNode alloc] initWithNode:parent];
-    [[newNode children] addObject:[self treeBuilder:newNode theData:array[0] keyName:@"NSDictionary"]];
+    newNode = [self treeBuilder:parent theData:array[0] keyName:@"NSDictionary"];
     
     return newNode;
 }
@@ -179,6 +174,5 @@ NSString* nameOfArray;
         if ( nodePointer.parent == NULL ) finished = true;
     }
 }
-
 
 @end

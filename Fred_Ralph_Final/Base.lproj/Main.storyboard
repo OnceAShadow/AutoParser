@@ -596,7 +596,7 @@
         <!--Customize-->
         <scene sceneID="PPB-7f-Nnw">
             <objects>
-                <viewController id="yIA-0u-yX0" sceneMemberID="viewController">
+                <viewController id="yIA-0u-yX0" customClass="ElementSelection" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="beB-th-6P6"/>
                         <viewControllerLayoutGuide type="bottom" id="OPf-Vy-zp6"/>
@@ -605,8 +605,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WS-Ur-K40">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WS-Ur-K40">
                                 <rect key="frame" x="0.0" y="64" width="600" height="480"/>
+                                <connections>
+                                    <outlet property="delegate" destination="yIA-0u-yX0" id="FEI-47-zc9"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -625,6 +628,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="scrollView" destination="4WS-Ur-K40" id="lJk-rX-dwY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilI-yO-hWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

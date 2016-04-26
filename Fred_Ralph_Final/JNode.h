@@ -14,6 +14,7 @@
     
 @property(nonatomic, strong)NSString* name;
 @property(nonatomic, strong)NSString* type;
+@property(nonatomic, strong)NSString* customName;
 
 @property(nonatomic, strong)NSMutableArray* children;
 @property(nonatomic, strong)JNode* parent;
