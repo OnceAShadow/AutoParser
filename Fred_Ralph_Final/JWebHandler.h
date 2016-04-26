@@ -12,10 +12,11 @@
 
 @interface JWebHandler : NSObject
 
-- (NSError*) autoParse:(NSString*)urlString;
+@property (nonatomic, copy) NSString *webString;
 
 @property (strong, nonatomic) JNode* treeRoot;
 
+- (NSError*) autoParse:(NSString*)urlString;
 + (id)sharedJWebHandler;
     
 @end

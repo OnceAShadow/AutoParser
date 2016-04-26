@@ -10,8 +10,13 @@
 		704667CD1CC5FA850049AA2F /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 704667CC1CC5FA850049AA2F /* APIManager.m */; };
 		70476E0A1CCCE5440057DD91 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70476E091CCCE5440057DD91 /* UserManager.m */; };
 		70476E0D1CCD76A80057DD91 /* OutputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70476E0C1CCD76A80057DD91 /* OutputManager.m */; };
+		70476E0F1CCDDEDF0057DD91 /* OutputConfigurationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70476E0E1CCDDEDF0057DD91 /* OutputConfigurationStoryboard.storyboard */; };
 		70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A23BE01CC02A3800277787 /* MainScreenViewController.m */; };
 		70AC159B1CBB3A8C00613419 /* APIListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */; };
+		70E6F4C81CCE80AB004B0E97 /* BuildTestViewcontrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E6F4C71CCE80AB004B0E97 /* BuildTestViewcontrollerViewController.m */; };
+		70E6F5211CCF220A004B0E97 /* highlight.pack.js in Resources */ = {isa = PBXBuildFile; fileRef = 70E6F51E1CCF220A004B0E97 /* highlight.pack.js */; };
+		70E6F5221CCF220A004B0E97 /* TestCode.html in Resources */ = {isa = PBXBuildFile; fileRef = 70E6F51F1CCF220A004B0E97 /* TestCode.html */; };
+		70E6F5231CCF220A004B0E97 /* xcode.css in Resources */ = {isa = PBXBuildFile; fileRef = 70E6F5201CCF220A004B0E97 /* xcode.css */; };
 		842C24F31CCDABF600EE5A3A /* JNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F01CCDABF600EE5A3A /* JNode.m */; };
 		842C24F41CCDABF600EE5A3A /* JWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F21CCDABF600EE5A3A /* JWebHandler.m */; };
 		842C24F71CCDDA4700EE5A3A /* ElementSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C24F61CCDDA4700EE5A3A /* ElementSelection.m */; };
@@ -31,10 +36,16 @@
 		70476E091CCCE5440057DD91 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		70476E0B1CCD76A80057DD91 /* OutputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputManager.h; sourceTree = "<group>"; };
 		70476E0C1CCD76A80057DD91 /* OutputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputManager.m; sourceTree = "<group>"; };
+		70476E0E1CCDDEDF0057DD91 /* OutputConfigurationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OutputConfigurationStoryboard.storyboard; sourceTree = "<group>"; };
 		70A23BDF1CC02A3800277787 /* MainScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScreenViewController.h; path = MainScreen/MainScreenViewController.h; sourceTree = "<group>"; };
 		70A23BE01CC02A3800277787 /* MainScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScreenViewController.m; path = MainScreen/MainScreenViewController.m; sourceTree = "<group>"; };
 		70AC15991CBB3A8C00613419 /* APIListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIListTableViewController.h; sourceTree = "<group>"; };
 		70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIListTableViewController.m; sourceTree = "<group>"; };
+		70E6F4C61CCE80AB004B0E97 /* BuildTestViewcontrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuildTestViewcontrollerViewController.h; path = APIs/BuildTestViewcontrollerViewController.h; sourceTree = "<group>"; };
+		70E6F4C71CCE80AB004B0E97 /* BuildTestViewcontrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuildTestViewcontrollerViewController.m; path = APIs/BuildTestViewcontrollerViewController.m; sourceTree = "<group>"; };
+		70E6F51E1CCF220A004B0E97 /* highlight.pack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = highlight.pack.js; path = html/highlight.pack.js; sourceTree = "<group>"; };
+		70E6F51F1CCF220A004B0E97 /* TestCode.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = TestCode.html; path = html/TestCode.html; sourceTree = "<group>"; };
+		70E6F5201CCF220A004B0E97 /* xcode.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = xcode.css; path = html/xcode.css; sourceTree = "<group>"; };
 		842C24EF1CCDABF600EE5A3A /* JNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNode.h; sourceTree = "<group>"; };
 		842C24F01CCDABF600EE5A3A /* JNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNode.m; sourceTree = "<group>"; };
 		842C24F11CCDABF600EE5A3A /* JWebHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWebHandler.h; sourceTree = "<group>"; };
@@ -76,6 +87,8 @@
 				70476E091CCCE5440057DD91 /* UserManager.m */,
 				70476E0B1CCD76A80057DD91 /* OutputManager.h */,
 				70476E0C1CCD76A80057DD91 /* OutputManager.m */,
+				70E6F4C61CCE80AB004B0E97 /* BuildTestViewcontrollerViewController.h */,
+				70E6F4C71CCE80AB004B0E97 /* BuildTestViewcontrollerViewController.m */,
 			);
 			name = "Generic API Parser";
 			sourceTree = "<group>";
@@ -94,6 +107,16 @@
 				70AC159A1CBB3A8C00613419 /* APIListTableViewController.m */,
 			);
 			name = "Available API List";
+			sourceTree = "<group>";
+		};
+		70E6F51D1CCF21FD004B0E97 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				70E6F51E1CCF220A004B0E97 /* highlight.pack.js */,
+				70E6F51F1CCF220A004B0E97 /* TestCode.html */,
+				70E6F5201CCF220A004B0E97 /* xcode.css */,
+			);
+			name = html;
 			sourceTree = "<group>";
 		};
 		70EC2C631CC06335006B200D /* APis */ = {
@@ -128,6 +151,7 @@
 		84F50B0B1CB9C23C0077E484 /* Fred_Ralph_Final */ = {
 			isa = PBXGroup;
 			children = (
+				70E6F51D1CCF21FD004B0E97 /* html */,
 				70A23BDB1CC029A400277787 /* Generic API Parser */,
 				70A23BDC1CC029AB00277787 /* Favorites */,
 				70A23BDD1CC029D800277787 /* Available API List */,
@@ -137,6 +161,7 @@
 				84F50B121CB9C23C0077E484 /* ViewController.h */,
 				84F50B131CB9C23C0077E484 /* ViewController.m */,
 				84F50B151CB9C23C0077E484 /* Main.storyboard */,
+				70476E0E1CCDDEDF0057DD91 /* OutputConfigurationStoryboard.storyboard */,
 				84F50B1B1CB9C23D0077E484 /* Assets.xcassets */,
 				84F50B1D1CB9C23D0077E484 /* LaunchScreen.storyboard */,
 				84F50B201CB9C23D0077E484 /* Info.plist */,
@@ -213,8 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F50B1F1CB9C23D0077E484 /* LaunchScreen.storyboard in Resources */,
+				70476E0F1CCDDEDF0057DD91 /* OutputConfigurationStoryboard.storyboard in Resources */,
 				84F50B1C1CB9C23D0077E484 /* Assets.xcassets in Resources */,
+				70E6F5231CCF220A004B0E97 /* xcode.css in Resources */,
+				70E6F5221CCF220A004B0E97 /* TestCode.html in Resources */,
 				84F50B171CB9C23C0077E484 /* Main.storyboard in Resources */,
+				70E6F5211CCF220A004B0E97 /* highlight.pack.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +258,7 @@
 				84F50B141CB9C23C0077E484 /* ViewController.m in Sources */,
 				842C24F31CCDABF600EE5A3A /* JNode.m in Sources */,
 				842C24F41CCDABF600EE5A3A /* JWebHandler.m in Sources */,
+				70E6F4C81CCE80AB004B0E97 /* BuildTestViewcontrollerViewController.m in Sources */,
 				84F50B1A1CB9C23D0077E484 /* Fred_Ralph_Final.xcdatamodeld in Sources */,
 				84F50B111CB9C23C0077E484 /* AppDelegate.m in Sources */,
 				70A23BE11CC02A3800277787 /* MainScreenViewController.m in Sources */,

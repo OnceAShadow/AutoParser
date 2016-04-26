@@ -3,7 +3,7 @@
 //  Fred_Ralph_Final
 //
 //  Created by Rafael Flores on 4/19/16.
-//  Copyright © 2016 MAE. All rights reserved.
+//  Copyright © 2016. All rights reserved.
 //
 
 #import "APIManager.h"
@@ -34,14 +34,9 @@
 
 @implementation API
 
-
 - (NSString *) stringAPIRepresentation{
-    
     NSMutableString * stringRepresentation = [NSMutableString new];
-
     return stringRepresentation;
-    
-    
 }
 - (NSString *) jsonAPIRepresentation{
     NSMutableString * jsonRepresentation = [NSMutableString new];
@@ -53,6 +48,12 @@
     NSMutableData * dataRepresentation = [NSMutableData new];
     
     return dataRepresentation;
+
+}
+
+- (NSString *) colorHighlightedHTML{
+
+    return @"";
 
 }
 
@@ -70,8 +71,8 @@
     return @"";
     
 }
-- (enum APIPropertyType) APIValueType{
-    return APIPropertyTypeId;
+- (NSInteger) APIValueType{
+    return APIPropertyTypeNullorEmpty;
     
 }
 
@@ -99,7 +100,7 @@
     return apiObject;
 
 }
-- (enum APIPropertyType) APIValueType{
+- (NSInteger) APIValueType{
     return APIPropertyTypeDictionary;
 
 }
@@ -132,17 +133,14 @@
     return apiObject;
     
 }
-- (enum APIPropertyType) APIValueType{
+- (NSInteger) APIValueType{
     return APIPropertyTypeDictionary;
     
 }
 
 - (id) value{
     return self.arrayValue;
-    
 }
-
-
 @end
 
 
@@ -166,8 +164,8 @@
     return apiObject;
     
 }
-- (enum APIPropertyType) APIValueType{
-    return APIPropertyTypeDictionary;
+- (NSInteger) APIValueType{
+    return APIPropertyTypeString;
     
 }
 
@@ -192,7 +190,7 @@
     return apiObject;
     
 }
-- (enum APIPropertyType) APIValueType{
+- (NSInteger) APIValueType{
     return APIPropertyTypeDictionary;
     
 }
@@ -222,8 +220,8 @@
     return apiObject;
     
 }
-- (enum APIPropertyType) APIValueType{
-    return APIPropertyTypeDictionary;
+- (NSInteger) APIValueType{
+    return APIPropertyTypeNumber;
     
 }
 
@@ -246,7 +244,7 @@
     return apiObject;
     
 }
-- (enum APIPropertyType) APIValueType{
+- (NSInteger) APIValueType{
     return APIPropertyTypeString;
     
 }
