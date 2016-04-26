@@ -91,7 +91,7 @@
 
 - (NSString*) generateOutputfile:(int)fileNumber withName:(NSString*)fileName andFileType:(NSString*)fileExtension
 {
-    NSMutableString *stringContentsForFile=[NSMutableArray array];
+    NSMutableString *stringContentsForFile = [[NSMutableString alloc] init];
     
     //Get the model singleton
     JWebHandler *handler = [JWebHandler sharedJWebHandler];

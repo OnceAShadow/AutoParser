@@ -22,6 +22,7 @@
 
 
 @property (strong, nonatomic) NSDictionary *supportedOutputFormats;
+@property (strong, nonatomic) NSString *selectedOutputFormat;
 
 @end
 
@@ -33,7 +34,7 @@
     
     self.supportedOutputFormats = @{ @"Objective-C" : [ObjectiveCOutputFormatter new],
                                      @"Swift" : [SwiftOutputFormatter new],
-                                     @"C#" : [SwiftOutputFormatter new]
+                                     @"C#" : [SwiftOutputFormatter new] //to see more than two in the pickerview
                                      };
     
     
@@ -78,7 +79,10 @@
 }
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    NSString * selectedElement = self.supportedOutputFormats.allKeys[row];
+    self.selectedOutputFormat = self.supportedOutputFormats.allKeys[row];
+    
+    //set the selected output formatter to the output
+    //self.[self.supportedOutputFormats objectForKey:selectedElement];
 
 }
 
@@ -108,6 +112,8 @@
     
     JWebHandler *handler =  [JWebHandler sharedJWebHandler];
     OutputManager *outputManager = [OutputManager new];
+    outputManager.delegateOutput = [self.supportedOutputFormats objectForKey:self.selectedOutputFormat];
+    
     //outputManager s
     
     // Fill out the email body text
