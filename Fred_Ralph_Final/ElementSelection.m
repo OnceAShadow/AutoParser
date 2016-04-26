@@ -104,10 +104,19 @@ int pixelCounter;
     if( [node.type isEqualToString:@"NSDictionary"] ){
         if (![node.name isEqualToString:@"NSDictionary"]){
             debth++;
-            UIButton* newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 135, 30)];
+            
+            UIButton* newButton;
+            if( node.name.length > 12){
+                newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 170 + pixelCounter, 26)];
+            }else{
+                newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 135 + pixelCounter, 26)];
+            }
+
             newButton.backgroundColor = dictColor;
             newButton.layer.cornerRadius = 6.0;
             [newButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [newButton.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
+            
             NSString* str = node.name;
             str = [str capitalizedString];
             [newButton setTitle:str forState:UIControlStateNormal];
@@ -123,11 +132,11 @@ int pixelCounter;
             
             for (int i = 0; i < node.children.count; ++i){
                 
-                int tempX = tabValue * (tabLevel + 1);
+                int tempX = tabValue * (tabLevel);
                 int tempY = (debth+1) * debthValue;
                 [self buildButtons:node.children[i]];
                 pixelCounter++;
-                UILabel* tabElem = [[UILabel alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue) - 2, 13 + (pixelCounter/2), 28)];
+                UILabel* tabElem = [[UILabel alloc]initWithFrame:CGRectMake(60 + tempX, tempY - 2, 13 + (pixelCounter/2), 28)];
                 
                 JNode* nextNode = node.children[i];
                 if( [nextNode.type isEqualToString:@"NSString"] ){
@@ -147,7 +156,6 @@ int pixelCounter;
             [self.view addSubview:newLabel];
             [self.scrollView addSubview:newLabel];
 
-            
             tabLevel--;
         }else{
             for (int i = 0; i < node.children.count; ++i){
@@ -157,13 +165,21 @@ int pixelCounter;
     } else if( [node.type isEqualToString:@"NSArray"]) {
 
         debth++;
-        UIButton* newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 135, 24)];
+        
+        UIButton* newButton;
+        if( node.name.length > 12){
+            newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 170 + pixelCounter, 24)];
+        }else{
+            newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 135 + pixelCounter, 24)];
+        }
+        
         newButton.backgroundColor = arrayColor;
         newButton.layer.cornerRadius = 6.0;
         [newButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         NSString* str = node.name;
         str = [str capitalizedString];
         [newButton setTitle:str forState:UIControlStateNormal];
+        [newButton.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
         [self.view addSubview:newButton];
         [self.scrollView addSubview:newButton];
         tabLevel++;
@@ -175,7 +191,14 @@ int pixelCounter;
         tabLevel--;
     } else {
         debth++;
-        UIButton* newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 135 + pixelCounter, 24)];
+        
+        UIButton* newButton;
+        if( node.name.length > 12){
+            newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 170 + pixelCounter, 24)];
+        }else{
+            newButton = [[UIButton alloc]initWithFrame:CGRectMake(60 + (tabValue * tabLevel), (debth * debthValue), 135 + pixelCounter, 24)];
+        }
+        
         if([node.type isEqualToString:@"NSString"] ){
             newButton.backgroundColor = stringColor;
         }else{
@@ -187,6 +210,7 @@ int pixelCounter;
         NSString* str = node.name;
         str = [str capitalizedString];
         [newButton setTitle:str forState:UIControlStateNormal];
+        [newButton.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
         [self.view addSubview:newButton];
         [self.scrollView addSubview:newButton];
     }
