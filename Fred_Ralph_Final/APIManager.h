@@ -3,10 +3,29 @@
 //  Fred_Ralph_Final
 //
 //  Created by Rafael Flores on 4/19/16.
-//  Copyright © 2016 MAE. All rights reserved.
+//  Copyright © 2016. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
+
+
+
+
+
+
+
+
+/**
+ *  API Manager 
+ *  - add/remove apis fro the manager
+ */
+@interface APIManager : NSObject
+@property (nonatomic, strong) NSMutableArray *arrAPIs;
+
+
+
+@end
 
 
 
@@ -27,6 +46,7 @@
 - (NSString *) stringAPIRepresentation;
 - (NSString *) jsonAPIRepresentation;
 - (NSData *) serializableAPIRepresentation;
+- (NSString *) colorHighlightedHTML;
 
 
 @end
@@ -35,11 +55,11 @@
 /**
  *  Enum to identify the type of value an object has
  */
-NS_ENUM(NSInteger, APIPropertyType) {
+typedef NS_ENUM(NSInteger, APIPropertyType) {
     /**
      *  value string empty or string null
      */
-    APIPropertyTypeNullorEmpty,
+    APIPropertyTypeNullorEmpty=0,
     /**
      *  double quoted string
      */
@@ -71,11 +91,8 @@ NS_ENUM(NSInteger, APIPropertyType) {
     /**
      *  numerical value represented as NSDecimalNumber
      */
-    APIPropertyTypeDecimalNumber,
-    /**
-     *  generic type of object
-     */
-    APIPropertyTypeId
+    APIPropertyTypeDecimalNumber
+    
 };
 
 
@@ -89,7 +106,7 @@ NS_ENUM(NSInteger, APIPropertyType) {
 @interface APIValue : NSObject
 
 - (NSString*) outputAsString;
-- (enum APIPropertyType) APIValueType;
+- (NSInteger) APIValueType;
 - (id) value;
 
 @end
@@ -167,14 +184,3 @@ NS_ENUM(NSInteger, APIPropertyType) {
 @end
 
 
-
-
-
-
-
-
-@interface APIManager : NSObject
-
-@property (nonatomic, strong) NSMutableArray *arrAPIs;
-
-@end

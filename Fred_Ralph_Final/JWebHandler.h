@@ -10,9 +10,10 @@
 
 @interface JWebHandler : NSObject
 
+@property (nonatomic, copy) NSString *webString;
+
+
 - (NSError*) autoParse:(NSString*)urlString;
-
-
 + (id)sharedJWebHandler;
     
 @end

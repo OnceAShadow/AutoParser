@@ -39,6 +39,9 @@ NSString* nameOfArray;
 - (NSError*) autoParse:(NSString*)urlString{
     
     NSURL *url = [NSURL URLWithString:urlString];
+    self.webString = urlString;
+    
+    
     bestArraySize = 0;
     bestObjSize = 0;
     
