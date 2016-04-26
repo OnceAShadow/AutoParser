@@ -19,5 +19,4 @@
 @property(nonatomic, strong)NSMutableArray* children;
 @property(nonatomic, strong)JNode* parent;
 
-
 @end
