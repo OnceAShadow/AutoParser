@@ -75,37 +75,38 @@
     
     
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        JWebHandler *handler  = [JWebHandler sharedJWebHandler];
-        NSError * err = [handler autoParse:textField.text];
-        [self enableNextAfterParse:err];
+   // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
     
-    });
+    //});
     
 }
 
 
-- (void) enableNextAfterParse:(NSError *) error{
-    if(error!=nil){
-        //present alert view modal with the error
-        NSInteger errorCode = error.code;
-        NSString *stringCode = error.localizedDescription;
-        
-        NSLog(@"An error ocurred while parsing the URL. Code [%li], Description [%@]", (long)errorCode, stringCode);
-    }
-    else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.actParsing stopAnimating];
-            [self.btnContinue setHidden:NO];
-        });
-        
-    }
-
-}
+//- (void) enableNextAfterParse:(NSError *) error{
+//    if(error!=nil){
+//        //present alert view modal with the error
+//        NSInteger errorCode = error.code;
+//        NSString *stringCode = error.localizedDescription;
+//        
+//        NSLog(@"An error ocurred while parsing the URL. Code [%li], Description [%@]", (long)errorCode, stringCode);
+//    }
+//    else {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self.actParsing stopAnimating];
+//            [self.btnContinue setHidden:NO];
+//        });
+//        
+//    }
+//
+//}
 - (IBAction)continueAction:(UIButton *)sender {
+    JWebHandler *handler  = [JWebHandler sharedJWebHandler];
+    NSError * err = [handler autoParse:self.UniversalAPIBar.text];
     
     
-    [self performSegueWithIdentifier:@"displayCustomizableAPIView" sender:nil];
+    if(err==nil){
+        [self performSegueWithIdentifier:@"displayCustomizableAPIView" sender:nil];
+    }
 }
 
 
