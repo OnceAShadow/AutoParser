@@ -83,7 +83,7 @@ JNode* mainObj;
     bool foundMain = false;
     
     while (!foundMain){
-        if( [treeNode.name isEqualToString:@"MainArray"] ){
+        if( [treeNode.type isEqualToString:@"MainArray"] ){
             foundMain = true;
             mainObj = treeNode;
         }else{
